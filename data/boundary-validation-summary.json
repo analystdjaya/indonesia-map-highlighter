@@ -1,0 +1,34 @@
+{
+  "dataset": "data/indonesia-adm2-simplified.geojson",
+  "generated_date": "2026-06-18",
+  "feature_count": 519,
+  "official_reference_rows": 522,
+  "unique_region_ids": 519,
+  "duplicate_region_ids": [],
+  "geometry_types": {
+    "Polygon": 287,
+    "MultiPolygon": 232
+  },
+  "null_or_empty_geometry_count": 0,
+  "bad_coordinate_feature_count": 0,
+  "bbox": [
+    95.01114650000005,
+    -11.007615099999953,
+    141.0194,
+    6.07693
+  ],
+  "matched_unique_name_count": 466,
+  "ambiguous_geometry_name_count": 53,
+  "geometry_without_official_match_count": 0,
+  "unresolved_report_rows": 109,
+  "sha256": "6d735512fb7cab04ac7ca6048aa41437eba4f53595b83d8da4f25c198ba01f91",
+  "notes": [
+    "Full topology validation and repair were not performed in this environment; checks covered parseability, geometry type, empty geometry, coordinate ranges, stable IDs, and attribute completeness.",
+    "The production GeoJSON is the simplified browser dataset; the larger source archives timed out and were not committed."
+  ],
+  "app_simplification": "Douglas-Peucker per ring",
+  "app_simplification_tolerance_degrees": 0.018,
+  "vertex_count_before_app_simplification": 260746,
+  "vertex_count_after_app_simplification": 44950,
+  "file_size_bytes": 2014724
+}

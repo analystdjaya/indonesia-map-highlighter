@@ -1,0 +1,110 @@
+issue_type,geometry_source_name,geometry_source_id,official_code,province_name,region_name,candidate_count,notes
+ambiguous_geometry_name,Bandung,22746128B73297609500416,,,,2,Bandung | Jawa Barat | 32.04; Kota Bandung | Jawa Barat | 32.73
+ambiguous_geometry_name,Banjar,22746128B79736905882971,,,,2,Banjar | Kalimantan Selatan | 63.03; Kota Banjar | Jawa Barat | 32.79
+ambiguous_geometry_name,Bekasi,22746128B74302729610221,,,,2,Bekasi | Jawa Barat | 32.16; Kota Bekasi | Jawa Barat | 32.75
+ambiguous_geometry_name,Bima,22746128B14082340634491,,,,2,Bima | Nusa Tenggara Barat | 52.06; Kota Bima | Nusa Tenggara Barat | 52.72
+ambiguous_geometry_name,Blitar,22746128B45235083091424,,,,2,Blitar | Jawa Timur | 35.05; Kota Blitar | Jawa Timur | 35.72
+ambiguous_geometry_name,Bogor,22746128B99423643145371,,,,2,Bogor | Jawa Barat | 32.01; Kota Bogor | Jawa Barat | 32.71
+ambiguous_geometry_name,Cirebon,22746128B77544549346240,,,,2,Cirebon | Jawa Barat | 32.09; Kota Cirebon | Jawa Barat | 32.74
+ambiguous_geometry_name,Danau,22746128B15758871990616,,,,4,Danau | Sumatera Barat | 13.88; Danau | Sumatera Selatan | 16.88; Danau | Lampung | 18.88; Danau | Sulawesi Utara | 71.88
+ambiguous_geometry_name,Gorontalo,22746128B1660874628525,,,,2,Gorontalo | Gorontalo | 75.02; Kota Gorontalo | Gorontalo | 75.71
+ambiguous_geometry_name,Jayapura,22746128B71103770185906,,,,2,Jayapura | Papua | 94.03; Kota Jayapura | Papua | 94.71
+ambiguous_geometry_name,Kediri,22746128B82286187836997,,,,2,Kediri | Jawa Timur | 35.06; Kota Kediri | Jawa Timur | 35.71
+ambiguous_geometry_name,Kota Bandung,22746128B71762235135177,,,,2,Bandung | Jawa Barat | 32.04; Kota Bandung | Jawa Barat | 32.73
+ambiguous_geometry_name,Kota Banjar,22746128B64728543729693,,,,2,Banjar | Kalimantan Selatan | 63.03; Kota Banjar | Jawa Barat | 32.79
+ambiguous_geometry_name,Kota Bekasi,22746128B54763839112631,,,,2,Bekasi | Jawa Barat | 32.16; Kota Bekasi | Jawa Barat | 32.75
+ambiguous_geometry_name,Kota Bima,22746128B33789977192923,,,,2,Bima | Nusa Tenggara Barat | 52.06; Kota Bima | Nusa Tenggara Barat | 52.72
+ambiguous_geometry_name,Kota Blitar,22746128B15123001204790,,,,2,Blitar | Jawa Timur | 35.05; Kota Blitar | Jawa Timur | 35.72
+ambiguous_geometry_name,Kota Bogor,22746128B63896883204987,,,,2,Bogor | Jawa Barat | 32.01; Kota Bogor | Jawa Barat | 32.71
+ambiguous_geometry_name,Kota Cirebon,22746128B80288264799633,,,,2,Cirebon | Jawa Barat | 32.09; Kota Cirebon | Jawa Barat | 32.74
+ambiguous_geometry_name,Kota Gorontalo,22746128B66202348563483,,,,2,Gorontalo | Gorontalo | 75.02; Kota Gorontalo | Gorontalo | 75.71
+ambiguous_geometry_name,Kota Jayapura,22746128B85346986276333,,,,2,Jayapura | Papua | 94.03; Kota Jayapura | Papua | 94.71
+ambiguous_geometry_name,Kota Kediri,22746128B79918158306090,,,,2,Kediri | Jawa Timur | 35.06; Kota Kediri | Jawa Timur | 35.71
+ambiguous_geometry_name,Kota Kupang,22746128B56606429525327,,,,2,Kota Kupang | Nusa Tenggara Timur | 53.71; Kupang | Nusa Tenggara Timur | 53.03
+ambiguous_geometry_name,Kota Madiun,22746128B30166819315055,,,,2,Kota Madiun | Jawa Timur | 35.77; Madiun | Jawa Timur | 35.19
+ambiguous_geometry_name,Kota Magelang,22746128B66141272433758,,,,2,Kota Magelang | Jawa Tengah | 33.71; Magelang | Jawa Tengah | 33.08
+ambiguous_geometry_name,Kota Malang,22746128B9724218643478,,,,2,Kota Malang | Jawa Timur | 35.73; Malang | Jawa Timur | 35.07
+ambiguous_geometry_name,Kota Mojokerto,22746128B53956788697299,,,,2,Kota Mojokerto | Jawa Timur | 35.76; Mojokerto | Jawa Timur | 35.16
+ambiguous_geometry_name,Kota Pasuruan,22746128B86769429493629,,,,2,Kota Pasuruan | Jawa Timur | 35.75; Pasuruan | Jawa Timur | 35.14
+ambiguous_geometry_name,Kota Pekalongan,22746128B98453198956040,,,,2,Kota Pekalongan | Jawa Tengah | 33.75; Pekalongan | Jawa Tengah | 33.26
+ambiguous_geometry_name,Kota Probolinggo,22746128B48742890195125,,,,2,Kota Probolinggo | Jawa Timur | 35.74; Probolinggo | Jawa Timur | 35.13
+ambiguous_geometry_name,Kota Semarang,22746128B5783483209745,,,,2,Kota Semarang | Jawa Tengah | 33.74; Semarang | Jawa Tengah | 33.22
+ambiguous_geometry_name,Kota Serang,22746128B38845978082923,,,,2,Kota Serang | Banten | 36.73; Serang | Banten | 36.04
+ambiguous_geometry_name,Kota Solok,22746128B30699524960223,,,,2,Kota Solok | Sumatera Barat | 13.72; Solok | Sumatera Barat | 13.03
+ambiguous_geometry_name,Kota Sorong,22746128B11366688050704,,,,2,Kota Sorong | Papua Barat | 91.71; Sorong | Papua Barat | 91.07
+ambiguous_geometry_name,Kota Sukabumi,22746128B82825120895999,,,,2,Kota Sukabumi | Jawa Barat | 32.72; Sukabumi | Jawa Barat | 32.02
+ambiguous_geometry_name,Kota Tangerang,22746128B7613374511026,,,,2,Kota Tangerang | Banten | 36.71; Tangerang | Banten | 36.03
+ambiguous_geometry_name,Kota Tasikmalaya,22746128B57000549481658,,,,2,Kota Tasikmalaya | Jawa Barat | 32.78; Tasikmalaya | Jawa Barat | 32.06
+ambiguous_geometry_name,Kota Tegal,22746128B85080883644541,,,,2,Kota Tegal | Jawa Tengah | 33.76; Tegal | Jawa Tengah | 33.28
+ambiguous_geometry_name,Kupang,22746128B27765258797580,,,,2,Kota Kupang | Nusa Tenggara Timur | 53.71; Kupang | Nusa Tenggara Timur | 53.03
+ambiguous_geometry_name,Madiun,22746128B56340035124164,,,,2,Kota Madiun | Jawa Timur | 35.77; Madiun | Jawa Timur | 35.19
+ambiguous_geometry_name,Magelang,22746128B50341569898666,,,,2,Kota Magelang | Jawa Tengah | 33.71; Magelang | Jawa Tengah | 33.08
+ambiguous_geometry_name,Malang,22746128B8866265958554,,,,2,Kota Malang | Jawa Timur | 35.73; Malang | Jawa Timur | 35.07
+ambiguous_geometry_name,Mojokerto,22746128B795310620233,,,,2,Kota Mojokerto | Jawa Timur | 35.76; Mojokerto | Jawa Timur | 35.16
+ambiguous_geometry_name,Pasuruan,22746128B81373906315979,,,,2,Kota Pasuruan | Jawa Timur | 35.75; Pasuruan | Jawa Timur | 35.14
+ambiguous_geometry_name,Pekalongan,22746128B43405552393366,,,,2,Kota Pekalongan | Jawa Tengah | 33.75; Pekalongan | Jawa Tengah | 33.26
+ambiguous_geometry_name,Probolinggo,22746128B57336658570108,,,,2,Kota Probolinggo | Jawa Timur | 35.74; Probolinggo | Jawa Timur | 35.13
+ambiguous_geometry_name,Semarang,22746128B46914217687538,,,,2,Kota Semarang | Jawa Tengah | 33.74; Semarang | Jawa Tengah | 33.22
+ambiguous_geometry_name,Serang,22746128B3242616561013,,,,2,Kota Serang | Banten | 36.73; Serang | Banten | 36.04
+ambiguous_geometry_name,Solok,22746128B59065860162276,,,,2,Kota Solok | Sumatera Barat | 13.72; Solok | Sumatera Barat | 13.03
+ambiguous_geometry_name,Sorong,22746128B25112391877259,,,,2,Kota Sorong | Papua Barat | 91.71; Sorong | Papua Barat | 91.07
+ambiguous_geometry_name,Sukabumi,22746128B66929526216355,,,,2,Kota Sukabumi | Jawa Barat | 32.72; Sukabumi | Jawa Barat | 32.02
+ambiguous_geometry_name,Tangerang,22746128B62876177397182,,,,2,Kota Tangerang | Banten | 36.71; Tangerang | Banten | 36.03
+ambiguous_geometry_name,Tasikmalaya,22746128B89217704079934,,,,2,Kota Tasikmalaya | Jawa Barat | 32.78; Tasikmalaya | Jawa Barat | 32.06
+ambiguous_geometry_name,Tegal,22746128B39713682939315,,,,2,Kota Tegal | Jawa Tengah | 33.76; Tegal | Jawa Tengah | 33.28
+official_without_unique_geometry_match,,,32.04,Jawa Barat,Bandung,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,63.03,Kalimantan Selatan,Banjar,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.16,Jawa Barat,Bekasi,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,52.06,Nusa Tenggara Barat,Bima,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.05,Jawa Timur,Blitar,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.01,Jawa Barat,Bogor,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.09,Jawa Barat,Cirebon,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,13.88,Sumatera Barat,Danau,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,16.88,Sumatera Selatan,Danau,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,18.88,Lampung,Danau,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,71.88,Sulawesi Utara,Danau,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,75.02,Gorontalo,Gorontalo,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,94.03,Papua,Jayapura,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.06,Jawa Timur,Kediri,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.73,Jawa Barat,Kota Bandung,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.79,Jawa Barat,Kota Banjar,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.75,Jawa Barat,Kota Bekasi,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,52.72,Nusa Tenggara Barat,Kota Bima,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.72,Jawa Timur,Kota Blitar,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.71,Jawa Barat,Kota Bogor,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.74,Jawa Barat,Kota Cirebon,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,75.71,Gorontalo,Kota Gorontalo,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,94.71,Papua,Kota Jayapura,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.71,Jawa Timur,Kota Kediri,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,53.71,Nusa Tenggara Timur,Kota Kupang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.77,Jawa Timur,Kota Madiun,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,33.71,Jawa Tengah,Kota Magelang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.73,Jawa Timur,Kota Malang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.76,Jawa Timur,Kota Mojokerto,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.75,Jawa Timur,Kota Pasuruan,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,33.75,Jawa Tengah,Kota Pekalongan,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.74,Jawa Timur,Kota Probolinggo,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,33.74,Jawa Tengah,Kota Semarang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,36.73,Banten,Kota Serang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,13.72,Sumatera Barat,Kota Solok,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,91.71,Papua Barat,Kota Sorong,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.72,Jawa Barat,Kota Sukabumi,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,36.71,Banten,Kota Tangerang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.78,Jawa Barat,Kota Tasikmalaya,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,33.76,Jawa Tengah,Kota Tegal,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,53.03,Nusa Tenggara Timur,Kupang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.19,Jawa Timur,Madiun,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,33.08,Jawa Tengah,Magelang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.07,Jawa Timur,Malang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.16,Jawa Timur,Mojokerto,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.14,Jawa Timur,Pasuruan,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,33.26,Jawa Tengah,Pekalongan,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,35.13,Jawa Timur,Probolinggo,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,33.22,Jawa Tengah,Semarang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,36.04,Banten,Serang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,13.03,Sumatera Barat,Solok,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,91.07,Papua Barat,Sorong,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.02,Jawa Barat,Sukabumi,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,36.03,Banten,Tangerang,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,32.06,Jawa Barat,Tasikmalaya,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."
+official_without_unique_geometry_match,,,33.28,Jawa Tengah,Tegal,,"Not uniquely matched to geometry; may be ambiguous, newer than geometry, or represented differently."

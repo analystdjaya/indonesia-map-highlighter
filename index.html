@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peta Warna Wilayah Indonesia</title>
+  <link rel="stylesheet" href="./assets/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="control-panel" aria-label="Panel kontrol">
+      <header class="app-header">
+        <h1>Peta Warna Wilayah Indonesia</h1>
+        <p>Batas administrasi bersifat referensi visual.</p>
+      </header>
+
+      <section class="panel-section">
+        <label for="projectTitle">Judul Peta</label>
+        <input id="projectTitle" type="text" maxlength="90" value="Peta Sorotan Wilayah Indonesia">
+      </section>
+
+      <section class="panel-section">
+        <h2>Pilih Wilayah</h2>
+        <label for="searchInput">Cari Wilayah</label>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Contoh: Surabaya">
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Hasil pencarian"></div>
+
+        <label for="provinceSelect">Pilih Provinsi</label>
+        <select id="provinceSelect"></select>
+
+        <label for="regionSelect">Pilih Kabupaten/Kota</label>
+        <select id="regionSelect"></select>
+
+        <div class="selected-region" id="selectedRegion">Belum ada wilayah dipilih.</div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Warna</h2>
+        <label for="colorPicker">Pilih Warna</label>
+        <div class="color-row">
+          <input id="colorPicker" type="color" value="#4472C4">
+          <div id="quickColors" class="quick-colors" aria-label="Pilihan warna cepat"></div>
+        </div>
+        <label for="categoryInput">Kategori</label>
+        <input id="categoryInput" type="text" maxlength="60" placeholder="Opsional">
+        <label for="valueInput">Nilai</label>
+        <input id="valueInput" type="text" maxlength="60" placeholder="Opsional">
+        <div class="button-grid">
+          <button id="applyColorBtn" type="button">Terapkan Warna</button>
+          <button id="removeColorBtn" type="button" class="secondary">Hapus Warna</button>
+          <button id="undoBtn" type="button" class="secondary">Urungkan</button>
+          <button id="resetBtn" type="button" class="danger">Reset Semua</button>
+        </div>
+      </section>
+
+      <section class="panel-section">
+        <div class="section-heading">
+          <h2>Wilayah Disorot</h2>
+          <span id="highlightCount" class="count-pill">0</span>
+        </div>
+        <div id="highlightList" class="highlight-list" aria-live="polite"></div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Legenda</h2>
+        <label class="check-row"><input id="showLegend" type="checkbox" checked> Tampilkan legenda</label>
+        <label for="legendPosition">Posisi legenda</label>
+        <select id="legendPosition">
+          <option value="bottom-right">Kanan bawah</option>
+          <option value="bottom-left">Kiri bawah</option>
+          <option value="top-right">Kanan atas</option>
+          <option value="top-left">Kiri atas</option>
+        </select>
+        <div id="legendItems" class="legend-editor"></div>
+        <button id="addLegendBtn" type="button" class="secondary">Tambah Legenda</button>
+      </section>
+
+      <section class="panel-section">
+        <h2>Impor CSV</h2>
+        <p class="notice">File diproses hanya di browser ini dan tidak diunggah ke server.</p>
+        <input id="csvFile" type="file" accept=".csv,text/csv">
+        <div class="button-grid">
+          <button id="previewCsvBtn" type="button">Pratinjau CSV</button>
+          <button id="applyCsvBtn" type="button" class="secondary" disabled>Terapkan Hasil Valid</button>
+        </div>
+        <div id="csvPreview" class="import-preview"></div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Proyek</h2>
+        <p id="autosaveStatus" class="status-line">Autosave belum aktif.</p>
+        <input id="projectFile" type="file" accept=".json,application/json" hidden>
+        <div class="button-grid">
+          <button id="saveProjectBtn" type="button">Simpan Proyek</button>
+          <button id="openProjectBtn" type="button" class="secondary">Buka Proyek</button>
+          <button id="clearProjectBtn" type="button" class="danger">Bersihkan Proyek</button>
+        </div>
+      </section>
+
+      <section class="panel-section">
+        <h2>Ekspor</h2>
+        <label for="exportRatio">Rasio Kanvas</label>
+        <select id="exportRatio">
+          <option value="16:9">16:9</option>
+          <option value="4:3">4:3</option>
+          <option value="a4">A4 landscape</option>
+          <option value="1:1">Square</option>
+          <option value="bounds">Map bounds only</option>
+        </select>
+        <label class="check-row"><input id="exportLabels" type="checkbox"> Sertakan label wilayah disorot</label>
+        <label class="check-row"><input id="transparentBg" type="checkbox"> Latar transparan</label>
+        <label for="pngSize">Ukuran PNG</label>
+        <select id="pngSize">
+          <option value="1920x1080">1920 x 1080</option>
+          <option value="2560x1440">2560 x 1440</option>
+          <option value="3840x2160">3840 x 2160</option>
+        </select>
+        <div class="button-grid">
+          <button id="exportSvgBtn" type="button">Ekspor SVG</button>
+          <button id="exportPngBtn" type="button">Ekspor PNG</button>
+        </div>
+      </section>
+
+      <section class="panel-section small-copy">
+        <h2>Tentang Aplikasi</h2>
+        <p>Aplikasi statis ini membantu pewarnaan wilayah kabupaten/kota Indonesia untuk presentasi dan laporan.</p>
+        <details>
+          <summary>Sumber Data</summary>
+          <p>Geometri: geoBoundaries/HDX COD-AB Indonesia ADM2, CC BY-IGO. Batas bukan penetapan hukum.</p>
+        </details>
+        <details>
+          <summary>Privasi</summary>
+          <p>CSV dan proyek diproses di browser. Tidak ada unggahan, analitik, atau akun pengguna.</p>
+        </details>
+      </section>
+    </aside>
+
+    <main class="map-area">
+      <div class="map-toolbar">
+        <button id="fitIndonesiaBtn" type="button" class="secondary">Lihat Indonesia</button>
+        <span id="loadingIndicator" class="status-line">Memuat peta...</span>
+      </div>
+      <div id="errorArea" class="error-area" role="alert"></div>
+      <div id="map" aria-label="Peta Indonesia"></div>
+    </main>
+  </div>
+
+  <script src="./assets/vendor/leaflet/leaflet.js"></script>
+  <script src="./assets/js/project-storage.js"></script>
+  <script src="./assets/js/csv-import.js"></script>
+  <script src="./assets/js/export.js"></script>
+  <script src="./assets/js/map.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

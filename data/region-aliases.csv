@@ -1,0 +1,3 @@
+alias,official_code,province,region_name,notes
+KAB. BEKASI,32.16,JAWA BARAT,BEKASI,Example alias only; ambiguous geometry remains unresolved unless code is present.
+KOTA BEKASI,32.75,JAWA BARAT,KOTA BEKASI,Example city alias.
