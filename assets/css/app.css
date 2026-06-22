@@ -112,7 +112,7 @@ label {
 }
 
 .app-header {
-  padding: 18px 18px 12px 76px;
+  padding: 28px 18px 18px 82px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -445,7 +445,7 @@ summary {
   }
 
   .app-header {
-    padding-left: 76px;
+    padding: 28px 18px 18px 82px;
   }
 
   #map {
