@@ -35,6 +35,15 @@
       const normalizedColor = String(color || "").toUpperCase();
       if (isColor(normalizedColor)) groupNames[normalizedColor] = String(label || "").slice(0, 80);
     });
+    const groupMeta = {};
+    Object.entries(raw.groupMeta || {}).slice(0, 200).forEach(([color, meta]) => {
+      const normalizedColor = String(color || "").toUpperCase();
+      if (!isColor(normalizedColor) || !meta || typeof meta !== "object") return;
+      groupMeta[normalizedColor] = {
+        category: String(meta.category || "").slice(0, 80),
+        value: String(meta.value || "").slice(0, 80)
+      };
+    });
     return {
       appVersion: APP_VERSION,
       schemaVersion: PROJECT_SCHEMA,
@@ -45,6 +54,7 @@
       legendVisible: raw.legendVisible !== false,
       legendPosition: String(raw.legendPosition || "bottom-right"),
       groupNames,
+      groupMeta,
       exportSettings: raw.exportSettings || {},
       savedAt: raw.savedAt || new Date().toISOString()
     };
@@ -61,6 +71,7 @@
       legendVisible: state.legendVisible,
       legendPosition: state.legendPosition,
       groupNames: state.groupNames || {},
+      groupMeta: state.groupMeta || {},
       exportSettings: state.exportSettings || {},
       savedAt: new Date().toISOString()
     };
