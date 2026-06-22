@@ -194,7 +194,7 @@ label {
 }
 
 .grouping-list {
-  max-height: 306px;
+  max-height: 660px;
   overflow-y: auto;
   padding-right: 4px;
 }
