@@ -99,11 +99,6 @@ label {
   box-shadow: 0 6px 18px rgba(30, 41, 51, .22);
 }
 
-.app-shell.sidebar-collapsed .sidebar-toggle {
-  left: 12px;
-  top: 92px;
-}
-
 .floating-export-btn {
   position: fixed;
   left: 14px;
@@ -457,12 +452,6 @@ summary {
   .sidebar-toggle {
     left: auto;
     right: 12px;
-  }
-
-  .app-shell.sidebar-collapsed .sidebar-toggle {
-    left: 12px;
-    right: auto;
-    top: 92px;
   }
 
   .map-toolbar {
