@@ -136,9 +136,18 @@
           const metadataResponse = await fetch(source.url, { cache: "force-cache" });
           if (!metadataResponse.ok) throw new Error("Metadata geometri detail tidak tersedia.");
           const metadata = await metadataResponse.json();
-          const downloadUrl = metadata.gjDownloadURL || metadata.simplifiedGeometryGeoJSON;
-          if (!downloadUrl) throw new Error("URL GeoJSON detail tidak ditemukan.");
-          return await fetchGeoJson(downloadUrl);
+          const downloadUrls = [
+            metadata.simplifiedGeometryGeoJSON,
+            metadata.gjDownloadURL
+          ].filter(Boolean);
+          for (const downloadUrl of downloadUrls) {
+            try {
+              return await fetchGeoJson(downloadUrl);
+            } catch (error) {
+              // Try the next official geoBoundaries download URL.
+            }
+          }
+          throw new Error("URL GeoJSON detail tidak dapat dimuat.");
         }
         return await fetchGeoJson(source.url);
       } catch (error) {
