@@ -39,6 +39,6 @@ The geometry contains names and geoBoundaries shape IDs. HDX tabular ADM2 data w
 
 The legacy simplified copy was generated with Douglas-Peucker per linear ring at tolerance `0.018` degrees. That reduced the vertex count from 260,746 to 44,950, but neighboring polygons were simplified independently. An exact coordinate-edge comparison found 59,803 shared segments in the full source geometry and only 2,614 in the legacy copy.
 
-The browser now loads `indonesia-adm2.geojson` directly and sets Leaflet `smoothFactor` to `0`, so the same shared border is not simplified differently for each polygon during rendering. The simplified copy is not used for map borders. Do not restore per-feature simplification unless the replacement preserves shared topology.
+The browser now loads `indonesia-adm2.geojson` directly and sets Leaflet `smoothFactor` to `0` and `noClip` to `true`. This avoids per-feature simplification and viewport clipping, so the workspace draws the same raw rings as the export. The simplified copy is not used for map borders. Do not restore per-feature simplification unless the replacement preserves shared topology.
 
 Ambiguous features remain usable for manual coloring by stable internal ID, but they are not assigned official codes automatically.

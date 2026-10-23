@@ -45,8 +45,9 @@
       if (geoLayer) geoLayer.remove();
       layersById.clear();
       geoLayer = L.geoJSON(collection, {
-        // Do not simplify neighboring polygons independently: shared ADM2 edges must stay coincident.
+        // Match the export's raw rings: avoid per-feature simplification and viewport clipping.
         smoothFactor: 0,
+        noClip: true,
         style: styleFeature,
         onEachFeature(feature, layer) {
           const id = feature.properties.region_id;

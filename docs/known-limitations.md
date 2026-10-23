@@ -7,7 +7,7 @@
 - 53 same-name geometry features could not be assigned an official code safely because the geometry file stores name-only attributes.
 - DKI Jakarta administrative cities and Kepulauan Seribu are for visual reference, not legal boundary determination.
 - Small islands are preserved in the GeoJSON where present, but clickability depends on browser zoom and screen size.
-- Full topological validation and repair have not been completed. The map renders the full source geometry and avoids per-feature render simplification, but any defects already present in the 2020 source remain.
+- Full topological validation and repair have not been completed. The map renders the full source geometry without per-feature simplification or viewport clipping, but any defects already present in the 2020 source remain.
 - SVG/PNG export uses a browser-side projection intended for presentation maps, not survey or legal mapping.
 - Very large PNG exports may fail on memory-constrained browsers.
 - Offline/PWA support is deferred; the app is currently an online static GitHub Pages app.

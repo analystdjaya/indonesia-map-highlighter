@@ -29,7 +29,7 @@
   "notes": [
     "Full topology validation and repair were not performed in this environment; checks covered parseability, geometry type, empty geometry, coordinate ranges, stable IDs, and attribute completeness.",
     "The runtime app loads the full source geometry from indonesia-adm2.geojson; the legacy simplified file remains in the repository but is not used for map rendering.",
-    "Leaflet per-feature path simplification is disabled to keep coincident shared borders aligned."
+    "Leaflet per-feature path simplification and viewport clipping are disabled so the workspace renders the same raw rings as export."
   ],
   "app_simplification": "none beyond the source geometry; full source geometry is rendered",
   "app_simplification_tolerance_degrees": null,

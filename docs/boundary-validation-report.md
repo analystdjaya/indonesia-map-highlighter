@@ -47,7 +47,7 @@ No topology repair was performed. The source geometry was simplified upstream by
 
 ## Runtime rendering correction
 
-The app now loads `indonesia-adm2.geojson` directly. The smaller per-ring simplified file is retained for reference and is no longer rendered. Leaflet's per-feature path simplification is disabled (`smoothFactor: 0`) because it can simplify the same shared border differently in adjacent polygons.
+The app now loads `indonesia-adm2.geojson` directly. The smaller per-ring simplified file is retained for reference and is no longer rendered. Leaflet's per-feature path simplification is disabled (`smoothFactor: 0`), and renderer viewport clipping is disabled (`noClip: true`) so the workspace draws raw rings like the export path.
 
 An exact consecutive-coordinate comparison found 59,803 shared edge segments in the full source geometry and 2,614 in the legacy simplified copy. This confirms that the app-level simplification discarded many matching border segments. This comparison is not a complete topology validation or repair.
 

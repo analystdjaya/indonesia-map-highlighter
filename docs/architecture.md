@@ -23,7 +23,7 @@ No backend, database, API key, external tiles, analytics, or CDN dependency is r
 ## Data flow
 
 1. Browser loads `data/indonesia-adm2.geojson`, the app-ready full source geometry.
-2. Leaflet renders polygons without a basemap and without per-feature simplification, preserving coincident shared ADM2 edges.
+2. Leaflet renders polygons without a basemap, per-feature simplification, or viewport clipping, preserving the same raw rings used by export.
 3. User selections are stored by stable `region_id`.
 4. CSV and project files are processed locally by File APIs.
 5. SVG/PNG export is generated in-browser.
