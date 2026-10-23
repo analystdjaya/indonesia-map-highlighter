@@ -33,6 +33,8 @@
       return {
         color: selected ? "#111827" : (item ? "#49535d" : defaultStyle.color),
         weight: selected ? 2.2 : (item ? 1.2 : defaultStyle.weight),
+        lineCap: "round",
+        lineJoin: "round",
         fillColor: item ? item.color : defaultStyle.fillColor,
         fillOpacity: item ? 0.82 : defaultStyle.fillOpacity
       };
@@ -43,6 +45,8 @@
       if (geoLayer) geoLayer.remove();
       layersById.clear();
       geoLayer = L.geoJSON(collection, {
+        // Do not simplify neighboring polygons independently: shared ADM2 edges must stay coincident.
+        smoothFactor: 0,
         style: styleFeature,
         onEachFeature(feature, layer) {
           const id = feature.properties.region_id;

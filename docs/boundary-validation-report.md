@@ -35,15 +35,21 @@ Checks not completed in this environment:
 - Out-of-range coordinate features: 0
 - BBox: `[95.0111465, -11.0076151, 141.0194, 6.07693]`
 - Reference GeoJSON size: 9,930,000 bytes
-- App GeoJSON size: 2,014,724 bytes
-- App simplification: Douglas-Peucker per ring, tolerance 0.018 degrees
-- Vertex count before app simplification: 260,746
-- Vertex count after app simplification: 44,950
-- App GeoJSON SHA-256: `6d735512fb7cab04ac7ca6048aa41437eba4f53595b83d8da4f25c198ba01f91`
+- Legacy simplified GeoJSON size: 2,014,724 bytes
+- Legacy per-ring simplification: Douglas-Peucker, tolerance 0.018 degrees
+- Vertex count in full runtime geometry: 260,746
+- Vertex count in legacy simplified geometry: 44,950
+- Full runtime GeoJSON SHA-256: `b379b52fab7f2ac1ca85ccb670877785a3bc6f55534f7268868f8cdede72cd4f`
 
 ## Repairs performed
 
 No topology repair was performed. The source geometry was simplified upstream by geoBoundaries and retained in `indonesia-adm2.geojson`. A lighter app copy was simplified for runtime performance and written to `indonesia-adm2-simplified.geojson`. Properties were replaced with app-ready metadata fields.
+
+## Runtime rendering correction
+
+The app now loads `indonesia-adm2.geojson` directly. The smaller per-ring simplified file is retained for reference and is no longer rendered. Leaflet's per-feature path simplification is disabled (`smoothFactor: 0`) because it can simplify the same shared border differently in adjacent polygons.
+
+An exact consecutive-coordinate comparison found 59,803 shared edge segments in the full source geometry and 2,614 in the legacy simplified copy. This confirms that the app-level simplification discarded many matching border segments. This comparison is not a complete topology validation or repair.
 
 ## Known validation limitations
 

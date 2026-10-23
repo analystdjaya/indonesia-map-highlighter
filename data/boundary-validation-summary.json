@@ -1,5 +1,5 @@
 {
-  "dataset": "data/indonesia-adm2-simplified.geojson",
+  "dataset": "data/indonesia-adm2.geojson",
   "generated_date": "2026-06-18",
   "feature_count": 519,
   "official_reference_rows": 522,
@@ -21,14 +21,19 @@
   "ambiguous_geometry_name_count": 53,
   "geometry_without_official_match_count": 0,
   "unresolved_report_rows": 109,
-  "sha256": "6d735512fb7cab04ac7ca6048aa41437eba4f53595b83d8da4f25c198ba01f91",
+  "sha256": "b379b52fab7f2ac1ca85ccb670877785a3bc6f55534f7268868f8cdede72cd4f",
+  "runtime_configuration_reviewed_date": "2026-10-22",
+  "exact_shared_segment_count": 59803,
+  "legacy_simplified_exact_shared_segment_count": 2614,
+  "shared_segment_comparison_method": "Identical undirected consecutive coordinate segments present in two feature geometries; this is not a complete topology validation.",
   "notes": [
     "Full topology validation and repair were not performed in this environment; checks covered parseability, geometry type, empty geometry, coordinate ranges, stable IDs, and attribute completeness.",
-    "The production GeoJSON is the simplified browser dataset; the larger source archives timed out and were not committed."
+    "The runtime app loads the full source geometry from indonesia-adm2.geojson; the legacy simplified file remains in the repository but is not used for map rendering.",
+    "Leaflet per-feature path simplification is disabled to keep coincident shared borders aligned."
   ],
-  "app_simplification": "Douglas-Peucker per ring",
-  "app_simplification_tolerance_degrees": 0.018,
+  "app_simplification": "none beyond the source geometry; full source geometry is rendered",
+  "app_simplification_tolerance_degrees": null,
   "vertex_count_before_app_simplification": 260746,
-  "vertex_count_after_app_simplification": 44950,
-  "file_size_bytes": 2014724
+  "vertex_count_after_app_simplification": 260746,
+  "file_size_bytes": 9930000
 }

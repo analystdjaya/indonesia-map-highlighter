@@ -1,15 +1,5 @@
 (function () {
-  const DATA_URL = "./data/indonesia-adm2-simplified.geojson";
-  const DETAILED_GEOMETRY_SOURCES = [
-    {
-      type: "geojson",
-      url: "./data/indonesia-adm2-detailed.geojson"
-    },
-    {
-      type: "api",
-      url: "https://www.geoboundaries.org/api/current/gbOpen/IDN/ADM2/"
-    }
-  ];
+  const DATA_URL = "./data/indonesia-adm2.geojson";
   const quickColors = ["#4472C4", "#E74C3C", "#70AD47", "#FFC000", "#5B9BD5", "#A64D79", "#00A388", "#7F6000"];
   const state = {
     title: "Peta Sorotan Wilayah Indonesia",
@@ -104,12 +94,9 @@
 
   async function loadData() {
     try {
-      const response = await fetch(DATA_URL, { cache: "no-store" });
+      const response = await fetch(DATA_URL, { cache: "no-cache" });
       if (!response.ok) throw new Error("Data peta tidak dapat dimuat.");
-      const baseCollection = await response.json();
-      const detailedCollection = await loadDetailedGeometry();
-      const merged = detailedCollection ? mergeDetailedGeometry(baseCollection, detailedCollection) : { collection: baseCollection, matched: 0 };
-      const collection = merged.collection;
+      const collection = await response.json();
       state.features = collection.features || [];
       state.featureById = new Map(state.features.map((feature) => [feature.properties.region_id, feature]));
       mapApi.render(collection);
@@ -120,113 +107,11 @@
       renderHighlightList();
       renderGroupingEditor();
       refreshMapLegend();
-      el.loadingIndicator.textContent = merged.matched > 450
-        ? `${state.features.length} wilayah dimuat dengan geometri detail.`
-        : `${state.features.length} wilayah dimuat. Geometri detail cocok ${merged.matched}/${state.features.length}; cek nama field detail GeoJSON.`;
+      el.loadingIndicator.textContent = `${state.features.length} wilayah dimuat.`;
     } catch (error) {
       showError(error.message);
       el.loadingIndicator.textContent = "Gagal memuat peta.";
     }
-  }
-
-  async function loadDetailedGeometry() {
-    for (const source of DETAILED_GEOMETRY_SOURCES) {
-      try {
-        if (source.type === "api") {
-          const metadataResponse = await fetch(source.url, { cache: "force-cache" });
-          if (!metadataResponse.ok) throw new Error("Metadata geometri detail tidak tersedia.");
-          const metadata = await metadataResponse.json();
-          const downloadUrls = [
-            metadata.simplifiedGeometryGeoJSON,
-            metadata.gjDownloadURL
-          ].filter(Boolean);
-          for (const downloadUrl of downloadUrls) {
-            try {
-              return await fetchGeoJson(downloadUrl);
-            } catch (error) {
-              // Try the next official geoBoundaries download URL.
-            }
-          }
-          throw new Error("URL GeoJSON detail tidak dapat dimuat.");
-        }
-        return await fetchGeoJson(source.url);
-      } catch (error) {
-        // Try the next public source; the local simplified map remains the final fallback.
-      }
-    }
-    return null;
-  }
-
-  async function fetchGeoJson(url) {
-    const response = await fetch(url, { cache: "force-cache" });
-    if (!response.ok) throw new Error("Geometri detail tidak dapat dimuat.");
-    const text = await response.text();
-    if (/^version https:\/\/git-lfs.github.com\/spec\/v1/.test(text.trim())) {
-      throw new Error("URL mengarah ke Git LFS pointer, bukan GeoJSON asli.");
-    }
-    const collection = JSON.parse(text);
-    if (!collection || collection.type !== "FeatureCollection" || !Array.isArray(collection.features)) {
-      throw new Error("Format geometri detail tidak valid.");
-    }
-    return collection;
-  }
-
-  function mergeDetailedGeometry(baseCollection, detailedCollection) {
-    const detailedByKey = new Map();
-    (detailedCollection.features || []).forEach((feature) => {
-      if (!feature.geometry) return;
-      geometryMatchKeys(feature.properties || {}).forEach((key) => {
-        if (!detailedByKey.has(key)) detailedByKey.set(key, feature.geometry);
-      });
-    });
-    let matched = 0;
-    const features = (baseCollection.features || []).map((feature) => {
-      const geometry = geometryMatchKeys(feature.properties || {})
-        .map((key) => detailedByKey.get(key))
-        .find(Boolean);
-      if (!geometry) return feature;
-      matched += 1;
-      return Object.assign({}, feature, { geometry });
-    });
-    return {
-      collection: matched > 450 ? Object.assign({}, baseCollection, { features }) : baseCollection,
-      matched
-    };
-  }
-
-  function geometryMatchKeys(properties) {
-    const keys = [];
-    addKey(keys, "region:" + (properties.region_id || properties.id || properties.ID || ""));
-    addKey(keys, "shape:" + (properties.geometry_source_id || properties.shapeID || properties.shapeId || properties.shape_id || properties.ShapeID || ""));
-    addKey(keys, "code:" + normalizeCode(properties.official_code || properties.official_code_normalized || properties.ADM2_PCODE || properties.ADM2_CODE || properties.kode || properties.KODE || ""));
-    const province = properties.province_name || properties.ADM1_EN || properties.ADM1_ID || properties.PROVINSI || properties.Province || properties.province || "";
-    const region = properties.region_name || properties.display_name || properties.shapeName || properties.ShapeName || properties.ADM2_EN || properties.ADM2_ID || properties.KAB_KOTA || properties.NAME_2 || properties.name || properties.NAME || "";
-    addKey(keys, "name:" + normalizeText(province) + "|" + normalizeText(region));
-    addKey(keys, "region-name:" + normalizeText(region));
-    return keys;
-  }
-
-  function addKey(keys, value) {
-    const key = String(value || "").replace(/^shape:gb-/i, "shape:").trim();
-    if (!key || key.endsWith(":") || keys.includes(key)) return;
-    keys.push(key);
-  }
-
-  function normalizeCode(value) {
-    const text = String(value || "").trim().toUpperCase().replace(/^ID/, "").replace(/\./g, "");
-    if (/^\d{4}$/.test(text)) return text.slice(0, 2) + "." + text.slice(2);
-    return String(value || "").trim().toUpperCase();
-  }
-
-  function normalizeText(value) {
-    return String(value || "")
-      .normalize("NFKD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toUpperCase()
-      .replace(/\b(KABUPATEN|KAB\.?|KOTA|CITY|REGENCY)\b/g, " ")
-      .replace(/[^A-Z0-9]+/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
   }
 
   function restoreAutosave() {

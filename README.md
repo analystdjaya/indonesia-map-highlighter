@@ -64,6 +64,8 @@ SVG export is best for PowerPoint and editing. PNG export supports 1920 x 1080, 
 
 Production geometry is based on geoBoundaries Indonesia ADM2 using the HDX/OCHA COD-AB Indonesia lineage.
 
+The map renders the full source GeoJSON so neighboring city/regency borders stay aligned. The smaller per-ring simplified file is retained for reference and is not used for map rendering.
+
 - Boundary year represented: 2020
 - Feature count: 519
 - License reported by source metadata: CC BY-IGO / CC BY 3.0 IGO
